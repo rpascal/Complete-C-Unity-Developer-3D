@@ -7,15 +7,13 @@ public class MusicPlayer : MonoBehaviour {
 
 
     private void Awake() {
-        DontDestroyOnLoad(gameObject);
+        int numMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
+        if (numMusicPlayers > 1) {
+            Destroy(gameObject);
+        } else {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-    // Use this for initialization
-    void Start() {
-        Invoke("LoadFirstScene", 2f);
-    }
 
-    void LoadFirstScene() {
-        SceneManager.LoadScene(1);
-    }
 }
