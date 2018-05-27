@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
 
+    [SerializeField] readonly Tower towerPrefab;
+
+
     public bool isExplored = false;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
 
     const int gridSize = 10;
     Vector2Int gridPos;
+
+
 
 
     public Vector2Int GetGridPos() {
@@ -22,11 +28,16 @@ public class Waypoint : MonoBehaviour {
         return gridSize;
     }
 
-    public void SetTopColor(Color color) {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
+
+    private void OnMouseOver() {
+
+        if (Input.GetMouseButton(0) && isPlaceable) {
+            Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            isPlaceable = false;
+        }
+
     }
 
-    
+
 
 }
