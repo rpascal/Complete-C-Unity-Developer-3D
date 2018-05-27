@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4119129959683744}
   - component: {fileID: 114663575359418698}
+  - component: {fileID: 114610464379749230}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -158,8 +159,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208504256426754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children:
   - {fileID: 4596485904809888}
@@ -418,7 +419,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fc55dc0a3b8735e4a9fcbf520036e2c6, type: 2}
+  - {fileID: 2100000, guid: 275b172f562b575429540ecdfbacd9fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -641,7 +642,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1231937378316876}
-  m_Text: 0,0
+  m_Text: 3,0
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -655,6 +656,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!114 &114610464379749230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208504256426754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d459c3f3c9ee748959492ca73d5fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114663575359418698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -666,4 +678,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d21a13568e502c4c969723255dce654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
