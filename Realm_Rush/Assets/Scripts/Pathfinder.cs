@@ -28,9 +28,18 @@ public class Pathfinder : MonoBehaviour {
         LoadBlocks();
         ColorStartAndEnd();
         BreadthFirstSearch();
-        CreatePath();
+        GeneratePath(endWaypoint);
         return path;
     }
+    private void GeneratePath(Waypoint waypoint) {
+        path.Add(waypoint);
+        if (waypoint == startWaypoint) {
+            path.Reverse();
+            return;
+        }
+        GeneratePath(waypoint.exploredFrom);
+    }
+
 
     private void CreatePath() {
         path.Add(endWaypoint);
