@@ -229,8 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 4353836449739730}
-  targetEnemy: {fileID: 0}
-  attackRange: 10
+  attackRange: 30
   projectileParticle: {fileID: 198271044397734262}
 --- !u!198 &198271044397734262
 ParticleSystem:
@@ -3803,7 +3802,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
+    minKillSpeed: 1000
     maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
