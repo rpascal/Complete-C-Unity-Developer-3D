@@ -6,6 +6,8 @@ public class EnemyMovement : MonoBehaviour {
 
     [SerializeField] float movementPeriod = .5f;
     [SerializeField] ParticleSystem goalParticlePrefab;
+
+
     // Use this for initialization
     void Start() {
         Pathfinder pathFinder = FindObjectOfType<Pathfinder>();
